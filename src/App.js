@@ -43,26 +43,26 @@ const App = () => {
         },0);
         return(count);
     } */
-    return (<div>
+    return (<>
+        <CartProvider>
+            <Router>
+                <Navbar  />
                 <div className="ui container">
-                <Router>
-                    <CartProvider>
-                        <Navbar  />
-                        <Switch>
-                            <Route exact path="/">
-                                <Products  />
-                            </Route>
-                            <Route path="/cart">
-                                <Cart  />
-                            </Route>
-                            <Route exact path="/checkout">
-                                <Checkout />
-                            </Route>
-                        </Switch>
-                        </CartProvider>
-                </Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <Products  />
+                        </Route>
+                        <Route path="/cart">
+                            <Cart  />
+                        </Route>
+                        <Route exact path="/checkout">
+                            <Checkout />
+                        </Route>
+                    </Switch>
                 </div>
-        </div>
+            </Router>
+        </CartProvider>
+        </>
     )
 }
 

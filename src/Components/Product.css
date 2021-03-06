@@ -28,6 +28,11 @@ height: 300px;
 .img-container:hover  .img{
     transform: scale(1.1);
 }
+.menu{
+    border: 0 none !important;
+    
+}
+
 .middle {
    /*  z-index: 100; */
     transition: .5s ease;

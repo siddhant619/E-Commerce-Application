@@ -57,7 +57,7 @@ const Products = () => {
     })
     console.log('in cart',inCartIds);
     const renderedProducts=products.map(product=>{
-        return(<div key={product.id} className="four wide column">
+        return(<div key={product.id} className="four wide menu column">
                 <Product  product={product} inCart={inCartIds.includes(product.id)} //inCart===true means product already in cart so disable adding it again
                 
                 />
@@ -65,7 +65,7 @@ const Products = () => {
         )
     } )
     return (
-        <div className="ui stackable grid">
+        <div className="ui centered stackable grid">
             {renderedProducts}
         </div>
     )

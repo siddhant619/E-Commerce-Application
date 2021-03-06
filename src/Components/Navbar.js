@@ -4,9 +4,9 @@ import {CartContext} from '../contexts/CartContext'
 const Navbar = ({itemCount}) => {
     const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
     return (
-        <div className="ui huge menu">
+        <div className="ui inverted fluid huge menu">
             <Link to="/">
-                <a className=" header item">E-CommApp</a>
+                <a className="inverted header item">E-CommApp</a>
             </Link>
             <div className="right menu">
                 <Link to="/cart">

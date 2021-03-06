@@ -51,14 +51,14 @@ const Cart = () => {
       )
     })
     return (
-      <div className="ui grid container">
-        <div className="ten wide column">
+      <div className="ui grid container" >
+        <div className="ten wide column" style={{border:"0px solid black",backgroundColor: "#ffffff"}}>
           <div className="ui divided scroll items">
-            In cart- {renderedItems.length}
+            
             {renderedItems}
           </div>
         </div>
-        <div className="four wide column">
+        <div className="four wide column" style={{border:"0px solid black",backgroundColor: "#ffffff"}}>
           {/* <div class="ui  header">Price details</div>
           <div class="ui divider"></div> */}
           <h4 className="ui horizontal divider header">
