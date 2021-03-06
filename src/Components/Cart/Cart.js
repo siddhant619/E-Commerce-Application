@@ -12,7 +12,8 @@ const Cart = () => {
     const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
 
     let totalPrice=0,itemCount=0;
-    const deliveryCharges=5;
+    
+    const deliveryCharges=cart.length===0?0:5;
     const renderedItems=cart.map(item=>{
       totalPrice+=item.price*item.count;
       itemCount+=item.count;
@@ -65,13 +66,21 @@ const Cart = () => {
             <i className="tags icon"></i>
             Price details
           </h4>
-          <p>Total({itemCount} Item{itemCount>1?'s':''}) :&nbsp; {totalPrice}</p>
+          <p>Total ({itemCount} Item{itemCount>1?'s':''}) :&nbsp; ${totalPrice}</p>
           <p>Delivery Charges: {totalPrice>500?'FREE':`$${deliveryCharges}`}</p>
           <div className="ui  divider "></div>
           <p className="ui header">Total Amount: ${totalPrice>500?totalPrice:totalPrice+deliveryCharges}</p>
-          <Link to="/checkout">
-            <button className="fluid ui button">Place order</button>
-          </Link>
+          
+          
+          {cart.length===0?
+            <Link to="/">
+              <button className="fluid ui  secondary  button">Shop Now!</button>
+            </Link>:
+            
+            <Link to="/checkout">
+              <button className="fluid ui  secondary  button">Place order</button>
+            </Link>
+          }
         </div>
       </div>
     )

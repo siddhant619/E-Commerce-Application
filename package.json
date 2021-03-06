@@ -1,6 +1,7 @@
 {
   "name": "e-commerce",
   "version": "0.1.0",
+  "proxy":"https://maps.googleapis.com/maps/api/geocode/json",
   "private": true,
   "dependencies": {
     "@stripe/react-stripe-js": "^1.2.2",

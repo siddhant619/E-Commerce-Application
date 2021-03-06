@@ -69,7 +69,7 @@ const AddressForm = ({next}) => {
             //const response= await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
             
             //FIXING CORS ERROR- https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
-            const response= await axios.get(`https://apis.mapmyindia.com/advancedmaps/v1/${process.env.REACT_APP_MYMAPINDIA_KEY}/rev_geocode?lat=${lat}&lng=${long}`);
+            const response= await axios.get(`https://cors-anywhere.herokuapp.com/https://apis.mapmyindia.com/advancedmaps/v1/${process.env.REACT_APP_MYMAPINDIA_KEY}/rev_geocode?lat=${lat}&lng=${long}`);
             if(response.data.responseCode===200){
                 setValue('pincode',response.data.results[0].pincode);
                 setValue('locality',`${response.data.results[0].city} ${response.data.results[0].state}`);
