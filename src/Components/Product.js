@@ -1,7 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import './Product.css'
 import Modal from './Modal'
-const Product = ({product,setCart,inCart}) => {
+import {CartContext} from '../contexts/CartContext'
+
+const Product = ({product,inCart}) => {
+    const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
     const [open, setOpen] = React.useState(false);
     return (<div className="ui gray raised card">
                 <div className="ui img-container image">
@@ -36,7 +39,7 @@ const Product = ({product,setCart,inCart}) => {
                 <Modal
                     product={product}
                     open={open} setOpen={setOpen}
-                    setCart={setCart} inCart={inCart}
+                     inCart={inCart}
                     onDismiss={() => console.log('dismiss')}
                 />
         </div>

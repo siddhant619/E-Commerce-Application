@@ -1,13 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Link} from 'react-router-dom'
+import {CartContext} from '../../contexts/CartContext'
 
 import './Cart.css'
-const Cart = ({cart,changeItemCount}) => {
+const Cart = () => {
     /* function increaseCount(item){
       setCart(cart=>{
         return( [...cart,item] )
     })
     } */
+    const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
+
     let totalPrice=0,itemCount=0;
     const deliveryCharges=5;
     const renderedItems=cart.map(item=>{

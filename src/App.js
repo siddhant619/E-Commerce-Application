@@ -4,8 +4,9 @@ import Products from './Components/Products'
 import Navbar from './Components/Navbar'
 import Cart from './Components/Cart/Cart'
 import Checkout from './Components/CheckoutForm/Checkout/Checkout'
+import {CartProvider} from './contexts/CartContext'
 const App = () => {
-    const [cart,setCart]=useState([]);
+    /* const [cart,setCart]=useState([]);
     useEffect(()=>{
         console.log('initial render');
         setCart(JSON.parse(localStorage.getItem("cart")) || [] );
@@ -41,22 +42,24 @@ const App = () => {
             return(acc+item.count)
         },0);
         return(count);
-    }
+    } */
     return (<div>
                 <div className="ui container">
                 <Router>
-                    <Navbar itemCount={getTotalItems()} />
-                    <Switch>
-                        <Route exact path="/">
-                            <Products cart ={cart} setCart={setCart} />
-                        </Route>
-                        <Route path="/cart">
-                            <Cart cart={cart} changeItemCount={changeItemCount} />
-                        </Route>
-                        <Route exact path="/checkout">
-                            <Checkout cart={cart}/>
-                        </Route>
-                    </Switch>
+                    <CartProvider>
+                        <Navbar  />
+                        <Switch>
+                            <Route exact path="/">
+                                <Products  />
+                            </Route>
+                            <Route path="/cart">
+                                <Cart  />
+                            </Route>
+                            <Route exact path="/checkout">
+                                <Checkout />
+                            </Route>
+                        </Switch>
+                        </CartProvider>
                 </Router>
                 </div>
         </div>

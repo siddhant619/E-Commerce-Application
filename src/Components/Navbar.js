@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Link} from 'react-router-dom'
+import {CartContext} from '../contexts/CartContext'
 const Navbar = ({itemCount}) => {
+    const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
     return (
         <div className="ui huge menu">
             <Link to="/">
@@ -9,7 +11,7 @@ const Navbar = ({itemCount}) => {
             <div className="right menu">
                 <Link to="/cart">
                     <a className="item">
-                        MyCart({itemCount}) &nbsp;
+                        MyCart({getTotalItems()}) &nbsp;
                         <i className="cart icon"></i>
                     </a>
                 </Link>

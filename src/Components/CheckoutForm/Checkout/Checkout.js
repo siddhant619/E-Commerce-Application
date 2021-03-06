@@ -2,7 +2,7 @@ import React , {Fragment, useState} from 'react'
 import AddressForm from '../AddressForm'
 import PaymentForm from '../PaymentForm'
 
-const Checkout = ({cart}) => {
+const Checkout = () => {
     const [activeStep, setActiveStep]=useState(0);
     const [shippingData, setShippingData]=useState({});
     
@@ -21,7 +21,7 @@ const Checkout = ({cart}) => {
 
     const Form=()=>{
         
-            return(activeStep===0?<AddressForm next={next}/>:<PaymentForm prevStep={prevStep} cart={cart} shippingData={shippingData}/>);
+            return(activeStep===0?<AddressForm next={next}/>:<PaymentForm prevStep={prevStep}  shippingData={shippingData}/>);
         
     }
     return (

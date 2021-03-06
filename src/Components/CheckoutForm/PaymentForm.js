@@ -1,11 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Elements, ElementsConsumer,CardElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import Review from './Review'
+import {CartContext} from '../../contexts/CartContext'
 
 const stripePromise=loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
-const PaymentForm = ({shippingData ,cart,prevStep}) => {
-    console.log(cart);
+const PaymentForm = ({shippingData ,prevStep}) => {
+    const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
+
+    console.log('In payment form',cart);
     console.log(shippingData);
     const handleSubmit=async (event,elements, stripe)=>{
         event.preventDefault();

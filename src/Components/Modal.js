@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import ReactDOM from 'react-dom';
+import {CartContext} from '../contexts/CartContext'
 
 const Modal = props => {
+    const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
 
-    
     return ReactDOM.createPortal(
         <div  onClick={()=>props.setOpen(!props.open)}  className={`ui inverted dimmer page  modals visible ${props.open?'active':''}`}>
         <div
@@ -31,7 +32,8 @@ const Modal = props => {
                 <div class={`ui ${props.inCart?' disabled':''} positive right labeled icon button`}
                     onClick={()=>{
                         if(!props.inCart){
-                            props.setCart(cart=>{
+                            
+                            setCart(cart=>{
                                 props.product.count=1;
                                 return( [...cart,props.product] )
                             })
