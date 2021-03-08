@@ -27,7 +27,7 @@ const Checkout = () => {
     return (
         <div>
             <div className="ui hidden section divider"></div>
-            <div className="ui one column centered page grid" style={{border:"0px solid black"}}>
+            <div className="ui one stackable column centered page grid" style={{border:"0px solid black"}}>
                 <div className="column nine wide" style={{backgroundColor:"white"}}>
                     <div className="ui center aligned header">Checkout</div>
                     <div class="ui two steps mini">

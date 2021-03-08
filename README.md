@@ -1,7 +1,7 @@
 # E-Commerce Website
 An E-Commerce platform(front-end) built using React.js and Semantic UI. The goal of this project was to use react concepts learnt up until this point and familiarizing myself with documentation for new features and APIs. 
 
-[](Live Demo)  
+[https://ecommerce-site-react.netlify.app/](Live Demo)  
 
 
 ## Tools and technologies  

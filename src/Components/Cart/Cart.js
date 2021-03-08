@@ -22,7 +22,7 @@ const Cart = () => {
             <div className="ui tiny image" style={{border:"0px solid black"}}>
               <img src={item.imageURL} />
               <br></br>
-              <div className="quantity-change">
+              <div className="content quantity-change">
                 <i className={`icon  large minus circle ${item.count<=1?'disabled':''}`} 
                 onClick={()=>{
                   if(item.count>1)
@@ -52,7 +52,7 @@ const Cart = () => {
       )
     })
     return (
-      <div className="ui grid container" >
+      <div className="ui stackable grid container" >
         <div className="ten wide column" style={{border:"0px solid black",backgroundColor: "#ffffff"}}>
           <div className="ui divided scroll items">
             

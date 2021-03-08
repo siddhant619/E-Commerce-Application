@@ -179,10 +179,12 @@ const AddressForm = ({next}) => {
                     />
             </div>
             <div className="field">
-                <button class="ui primary button" onClick={setLocation}>
+               <button class="ui primary button" onClick={setLocation}>
                     <i class="map marker alternate icon"></i>
                     Get current location
                 </button>
+               
+            
             </div>
             <div className="fields">
                 {/* <div className="four wide required field">
