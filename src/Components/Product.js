@@ -29,7 +29,7 @@ const Product = ({product,inCart}) => {
                         </div>
                         
                     </div>
-                    <p className="ui ">${product.price}</p>
+                    <p className="ui ">&#8377;{product.price}</p>
                 </div>
                 {/* <div className="extra content flex">
                     <div>{product.description}</div>

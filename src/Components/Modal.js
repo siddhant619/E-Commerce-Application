@@ -17,7 +17,7 @@ const Modal = props => {
                 </div>
                 <div class="scrolling description">
                     
-                    <div class="ui header">{props.product.name} <br/>{props.product.price} </div>
+                    <div class="ui header">{props.product.name} <br/>&#8377;{props.product.price} </div>
                 
                     <p class="ui small header">DESCRIPTION</p>
                     <p>{props.product.description}</p>

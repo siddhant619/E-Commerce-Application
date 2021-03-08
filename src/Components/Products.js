@@ -2,8 +2,9 @@ import React,{useContext} from 'react'
 import Product from './Product'
 import './Product.css'
 import {CartContext} from '../contexts/CartContext'
-
-const products=[
+const products=require('./ProductsList').array;
+console.log(products);
+/* const products=[
     {
         id:1,
         name:"Kettle",
@@ -47,7 +48,7 @@ const products=[
         imageURL:"https://source.unsplash.com/zlFOerO7xeE/1600x1500"
     },
 
-]
+] */
 const Products = () => {
     const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
 
@@ -57,7 +58,7 @@ const Products = () => {
     })
     console.log('in cart',inCartIds);
     const renderedProducts=products.map(product=>{
-        return(<div key={product.id} className="four wide menu column">
+        return(<div key={product.id} className="three wide menu column">
                 <Product  product={product} inCart={inCartIds.includes(product.id)} //inCart===true means product already in cart so disable adding it again
                 
                 />

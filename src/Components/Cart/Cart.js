@@ -38,7 +38,7 @@ const Cart = () => {
               <div className="meta">
                 <span className="cinema">{item.description}</span>
               </div>
-              <p className="header">${item.price*item.count}</p>
+              <p className="header">&#8377;{item.price*item.count}</p>
               <div className="extra">
                 
               <button className="ui tiny negative basic button"
@@ -66,10 +66,10 @@ const Cart = () => {
             <i className="tags icon"></i>
             Price details
           </h4>
-          <p>Total ({itemCount} Item{itemCount>1?'s':''}) :&nbsp; ${totalPrice}</p>
+          <p>Total ({itemCount} Item{itemCount>1?'s':''}) :&nbsp; &#8377;{totalPrice}</p>
           <p>Delivery Charges: {totalPrice>500?'FREE':`$${deliveryCharges}`}</p>
           <div className="ui  divider "></div>
-          <p className="ui header">Total Amount: ${totalPrice>500?totalPrice:totalPrice+deliveryCharges}</p>
+          <p className="ui header">Total Amount: &#8377;{totalPrice>500?totalPrice:totalPrice+deliveryCharges}</p>
           
           
           {cart.length===0?

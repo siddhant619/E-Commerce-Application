@@ -99,8 +99,8 @@ const AddressForm = ({next}) => {
     }
     const setLocation=()=>{
         setValue('pincode','101');
-        setValue('locality','fck');
-        setValue('address','stockton');
+        setValue('locality','../');
+        setValue('address','../');
         navigator.geolocation.getCurrentPosition(success, error, options);
     }
     return (

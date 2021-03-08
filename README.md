@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# E-Commerce Website
+An E-Commerce platform(front-end) built using React.js and Semantic UI. The goal of this project was to use react concepts learnt up until this point and familiarizing myself with documentation for new features and APIs. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[](Live Demo)  
 
-## Available Scripts
 
-In the project directory, you can run:
+## Tools and technologies  
 
-### `npm start`
+* [React.js](https://reactjs.org/)- A javascript library for building user interfaces
+* [React-router](https://reacttraining.com/)- Declarative routing for React
+* [React-hook-form](https://react-hook-form.com/)- Performant, flexible and extensible forms with easy-to-use validation.
+* [Semantic-UI](https://semantic-ui.com/)- A front-end development framework  
+* [Visual Studio Code](https://code.visualstudio.com/)- A source code editor developed by Microsoft for Windows, Linux and macOS
+* APIs used-
+    * [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)- The Geolocation.getCurrentPosition() method is used to get the current position of the device(latitude and longitude). 
+    * [MapMyIndia API](https://www.mapmyindia.com/api/advanced-maps/doc/reverse-geocoding-api)- Used to get the closest matching address to a provided geographical coordinates (latitude/longitude) ie. reverse geocoding.
+    * [Postal pin code API](http://www.postalpincode.in/Api-Details)- Used to get location details using pincode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Screen Shots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Products page:  
+![Product page](screenshots/Home.jpg)  
 
-### `npm run build`
+Cart:
+![Cart](screenshots/Cart.jpg)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Address Form:
+![Address form](screenshots/Checkout_address.jpg)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Payment Form:
+![Payment form](screenshots/Checkout_payment.jpg)  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Future plans  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Add backend using Node.js and MongoDB.
+* Register a user and authenticate.
+* Payment gateway integration using Stripe API (front-end done till now).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

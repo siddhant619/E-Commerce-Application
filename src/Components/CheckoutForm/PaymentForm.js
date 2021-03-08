@@ -3,8 +3,9 @@ import {Elements, ElementsConsumer,CardElement} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import Review from './Review'
 import {CartContext} from '../../contexts/CartContext'
-
+import Conformation from './Conformation'
 const stripePromise=loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+
 const PaymentForm = ({shippingData ,prevStep}) => {
     const [cart,setCart,changeItemCount,getTotalItems]=useContext(CartContext);
 
@@ -13,7 +14,9 @@ const PaymentForm = ({shippingData ,prevStep}) => {
     const handleSubmit=async (event,elements, stripe)=>{
         event.preventDefault();
         console.log('form submitted');
-        if(!stripe || !elements){
+        return;
+        //Backend to be integrated
+        /* if(!stripe || !elements){
             return;
         }
         const cardElement = elements.getElement(CardElement);
@@ -24,10 +27,20 @@ const PaymentForm = ({shippingData ,prevStep}) => {
 
         
         if (error) {
-        console.log('[error]', error);
+            console.log('[error]', error);
         } else {
-        console.log('[PaymentMethod]', paymentMethod);
-        }
+            
+            console.log('[PaymentMethod]', paymentMethod);
+            
+        } */
+    }
+    const getTotalAmount=()=>{
+        let totalPrice=0;
+        cart.map(item=>{
+            totalPrice+=item.price*item.count;
+        });
+
+        return(totalPrice);
     }
     return (
         <>
@@ -40,7 +53,7 @@ const PaymentForm = ({shippingData ,prevStep}) => {
                                 <br></br>
                                 <div style={{display:'flex',justifyContent:'space-between'}}>
                                     <button className="ui secondary basic button" onClick={prevStep}>Back</button>
-                                    <button className={`ui primary ${!stripe?'disabled':''} button`}>Pay</button>
+                                    <button className={`ui primary ${!stripe?'disabled':''} disabled button`}>Pay &#8377;{getTotalAmount()}</button>
                                 </div>
                             </form>
                         )
