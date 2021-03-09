@@ -98,9 +98,9 @@ const AddressForm = ({next}) => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
     const setLocation=()=>{
-        setValue('pincode','101');
-        setValue('locality','../');
-        setValue('address','../');
+        setValue('pincode','...');
+        setValue('locality','...');
+        setValue('address','...');
         navigator.geolocation.getCurrentPosition(success, error, options);
     }
     return (
@@ -166,7 +166,7 @@ const AddressForm = ({next}) => {
                         label="Phone No."
                         register={register({
                             pattern:{
-                                value:/^[0-9]{1}$/,
+                                value:/^[0-9]{10}$/,
                                 message:"Enter valid number"
                             },
                             
@@ -228,7 +228,7 @@ const AddressForm = ({next}) => {
                    
                     <FormInput 
                         type="text" name="locality" placeholder="lokation"
-                        label="Locality" readOnly value={`${region} ${state}`}
+                        label="District" readOnly value={`${region} ${state}`}
                         register={register}
                         error={errors.locality}
                     />

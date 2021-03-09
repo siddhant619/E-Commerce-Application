@@ -13,7 +13,7 @@ const Cart = () => {
 
     let totalPrice=0,itemCount=0;
     
-    const deliveryCharges=cart.length===0?0:5;
+    const deliveryCharges=cart.length===0?0:40;
     const renderedItems=cart.map(item=>{
       totalPrice+=item.price*item.count;
       itemCount+=item.count;
